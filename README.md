@@ -158,3 +158,4 @@ products for the first user in the database based on your seed data; and
 - `User#remove_reviews(product)`
   - takes a `Product` (an instance of the `Product` class) and removes _all_ of this user's reviews for that product
   - you will have to delete any rows from the `reviews` table associated with this user and the product
+# product-review-code-challenge
