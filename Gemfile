@@ -20,4 +20,7 @@ gem "sqlite3", "~> 1.4"
 # https://github.com/jarmo/require_all
 gem "require_all"
 
+#https://github.com/faker-ruby/faker
+gem "faker"
+
 gem "pry"

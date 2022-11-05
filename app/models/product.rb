@@ -1,3 +1,4 @@
 class Product < ActiveRecord::Base
-    soon
+    has_many :reviews
+    has_many :users, through: :reviews
 end
