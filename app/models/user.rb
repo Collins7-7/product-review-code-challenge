@@ -7,21 +7,18 @@ class User < ActiveRecord::Base
         rev.star_rating
     end.sort.last
 
-    # @prorev = self.products.map do |pro|
-    #     pro.reviews
-    # end
-    # @rev_flat = @prorev.flatten
-
-    # @rev_flat.map do |rev|
-    #     rev.star_rating
-    # end.sort.last
-
-    # self.products.filter do |pro|
-    #     pro
-    # end
-
     self.products.filter do |pro|
         pro.highest_rating == @highest_rated
     end
+    end
+
+    def instance_review
+        self.reviews.map do |rev|
+
+        end
+    end 
+
+    def remove_reviews(product)
+       self.reviews.where(product: product).destroy_all
     end
 end

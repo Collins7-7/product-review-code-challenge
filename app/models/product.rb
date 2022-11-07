@@ -21,4 +21,10 @@ class Product < ActiveRecord::Base
             rev.star_rating
         end.sort.last
     end
+
+    def product_user_reviews
+        self.users.map do |user|
+            user.reviews 
+        end.flatten 
+    end
 end
